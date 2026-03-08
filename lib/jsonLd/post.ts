@@ -5,14 +5,14 @@ export const createPostJsonLd = (post: Post) => {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
     headline: post.meta.title,
-    url: `https://alexpate.com/posts/${post.slug}`,
+    url: `https://saurabhcoded.github.io/posts/${post.slug}`,
     datePublished: post.date,
     dateModified: post.date,
     author: [
       {
         '@type': 'Person',
-        name: 'Alex Pate',
-        url: 'https://alexpate.com',
+        name: 'Saurabh Sharma',
+        url: 'https://saurabhcoded.github.io',
       },
     ],
   };

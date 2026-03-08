@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 
 import { getAllPosts } from '@/lib/articles';
 
-const baseUrl = `https://alexpate.com`;
+const baseUrl = `https://saurabhcoded.github.io`;
 
 const baseSitemap = [
   {

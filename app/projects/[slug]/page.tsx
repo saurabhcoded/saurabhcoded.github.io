@@ -26,8 +26,8 @@ export async function generateMetadata({
   return {
     title: workItem?.meta.title,
     description: workItem?.meta.description,
-    publisher: 'Alex Pate',
-    creator: 'Alex Pate',
+    publisher: 'Saurabh Sharma',
+    creator: 'Saurabh Sharma',
   };
 }
 

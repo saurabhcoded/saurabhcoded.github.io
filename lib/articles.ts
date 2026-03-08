@@ -99,9 +99,11 @@ export const getPostBySlug = (slug: string, isWork?: boolean): Post | null => {
 export const getAllPosts = async ({
   includeDrafts,
   isWork,
+  limit = null
 }: {
   includeDrafts?: boolean;
   isWork?: boolean;
+  limit?: number | null
 }): Promise<Post[]> => {
   const files = fs.readdirSync(path.join(isWork ? WORK_PATH : POSTS_PATH));
 
@@ -116,11 +118,14 @@ export const getAllPosts = async ({
       }
       return 1;
     })
-    .filter((post) => {
+    .filter((post, postIndex) => {
       if (post.meta?.draft) {
         if (includeDrafts) {
           return true;
         }
+        return false;
+      }
+      if(limit && postIndex >= limit){
         return false;
       }
       return true;

@@ -1,65 +1,29 @@
 import Link from 'next/link';
-import Image from 'next/image';
-
 import { ArticleLink } from './components/article-link';
-import clsx from 'clsx';
 import { getAllPosts } from '@/lib/articles';
 import { Title } from '@/app/components/title';
-
-const projects: {
-  href?: string;
-  title: string;
-  infoLabel?: string;
-  description: string;
-  image: string;
-}[] = [
-  {
-    title: 'Hystruct',
-    href: 'https://www.hystruct.com',
-    infoLabel: 'Acquired 2025',
-    description: 'Scrape structured data from the web with AI',
-    image: '/hystruct.png',
-  },
-  {
-    title: 'Linky',
-    href: 'https://lin.ky',
-    description:
-      'A super simple way to create beautiful personal landing pages.',
-    image: '/linky.png',
-  },
-  {
-    title: 'Starkie AI',
-    href: 'https://starkie.ai',
-    description: 'A platform to generate photos of yourself using AI',
-    image: '/starkie.png',
-  },
-  {
-    href: 'https://github.com/alexpate/awesome-design-systems',
-    title: 'Awesome Design Systems',
-    description: 'A curated list of design systems',
-    image: '/awesome-design-systems.png',
-  },
-];
 
 export default async function Home() {
   const posts = await getAllPosts({
     includeDrafts: process.env.NODE_ENV === 'development',
+  });
+  const works = await getAllPosts({
+    includeDrafts: process.env.NODE_ENV === 'development',
+    isWork: true,
+    limit: 4
   });
 
   return (
     <main className="px-4 md:px-0">
       <section className="pb-14 border-b border-slate-300 mb-14">
         <h1 className="font-semibold text-4xl mb-4 text-slate-950">
-          Ciao, I’m Alex.
+          Helo, I’m Saurabh.
           <span className="block text-slate-500 font-normal text-2xl">
-            A product engineer from the UK based in Milan.
+            A software developer from India.
           </span>
         </h1>
         <p className="text-slate-700 text-lg md:text-xl leading-normal">
-          I work with leading-edge companies to create exceptional products. I
-          most recently worked with MoonPay to help make web3 accessible. Before
-          that, I built personal and business banking products for millions of
-          customers at Monzo.
+            I focus on building scalable web platforms and cloud-native systems while integrating AI capabilities into modern applications. I design robust APIs, distributed architectures, and high-performance services with strong emphasis on security, scalability, and reliable enterprise-grade software.
         </p>
         <Link
           href="/info"
@@ -80,45 +44,19 @@ export default async function Home() {
         <p className="text-slate-700 text-lg">
           Below is a selection of recent projects that I&apos;ve worked on.
         </p>
-        <div className="lg:w-[170%] lg:-ml-[35%] grid grid-cols-1 md:grid-cols-2 grid-flow-dense gap-8 mt-16">
-          {projects.map((project) => {
-            const isLink = !!project.href;
-            const WrappingComponent = isLink ? Link : 'div';
-
+        <section className="py-5 divide-y divide-slate-200">
+          {works.map((post) => {
             return (
-              <WrappingComponent
-                href={project.href ?? '/'}
-                key={project.title}
-                className={clsx(
-                  'flex flex-col justify-center bg-slate-100 hover:bg-slate-200/70 transition-colors rounded-xl p-8'
-                )}
-              >
-                <div className="relative rounded-xl mb-4 box-shadow-project">
-                  <Image
-                    width={450}
-                    height={240}
-                    quality={90}
-                    src={project.image}
-                    alt=""
-                    className="rounded-xl bg-cover"
-                  />
-                </div>
-                <h3 className="text-slate-700 font-semibold tracking-tight text-xl">
-                  {project.title}
-                  {project.infoLabel && (
-                    <span className="text-green-500 text-xs uppercase ml-2">
-                      ({project.infoLabel})
-                    </span>
-                  )}
-                </h3>
-                <h3 className="text-slate-500 text-base">
-                  {project.description}
-                </h3>
-              </WrappingComponent>
+              <ArticleLink
+              key={post.meta.title}
+              href={post.href}
+              title={post.meta.title}
+              summary={post.meta.description}
+              date={post.date}
+            />
             );
           })}
-        </div>
-
+        </section>
         <Link
           href="/projects"
           className="group bg-slate-950 hover:bg-slate-800 transition-colors inline-block mt-8 font-mono text-xs font-semibold rounded-full px-8 py-3 text-white"

@@ -10,34 +10,28 @@ const experience: {
   logo: string;
 }[] = [
   {
-    company: 'Mainframe',
-    role: 'Design Engineer',
-    date: 'November 2024 → Present',
-    logo: '/mainframe-logo.jpg',
+    company: 'ITC Infotech',
+    role: 'Senior Developer - Cloud App',
+    date: 'Jan 2026 → Present',
+    logo: '/itci-logo.jpg',
   },
   {
-    company: 'MoonPay',
-    role: 'Senior Front-End Engineer',
-    date: 'April 2022 → August 2024',
-    logo: '/moonpay-logo.jpg',
+    company: 'Codefire Technologies',
+    role: 'Software Developer',
+    date: 'September 2023 → December 2025',
+    logo: '/cf-logo.png',
   },
   {
-    company: 'Monzo',
-    role: 'Web Engineer / Product Designer',
-    date: 'May 2019 → November 2021',
-    logo: '/monzo-logo.png',
+    company: 'Govardhan Learning Cloud',
+    role: 'Fullstack Developer',
+    date: 'December 2022 → September 2023',
+    logo: '/glcloud-logo.jpg',
   },
   {
-    company: 'Kalo',
-    role: 'UI Engineer',
-    date: 'February 2017 → May 2019',
-    logo: '/kalo-logo.jpg',
-  },
-  {
-    company: 'Pusher',
-    role: 'Front-end Developer',
-    date: 'September 2015 → January 2017',
-    logo: '/pusher-logo.jpg',
+    company: 'VRD Creative Pvt Ltd',
+    role: 'Web Designer',
+    date: 'May 2021 → June 2022',
+    logo: '/vrd-logo.jpg',
   },
 ];
 
@@ -47,7 +41,7 @@ export default async function InfoPage() {
       <PageHeader title="Information" />
       <section className="pb-8 prose prose-lg">
         <p>
-          Hi there, I&apos;m Alex. I build my own products, along side working
+          Hi there, I&apos;m Saurabh. I build my own products, along side working
           with some amazing companies to help them build theirs.
         </p>
         <p>
@@ -75,7 +69,7 @@ export default async function InfoPage() {
         <p>
           If you&apos;re interested in working together, feel free to reach out
           to me here:{' '}
-          <Link href="mailto:hey@alexpate.com">hey@alexpate.com</Link>.
+          <Link href="mailto:saurabhcoded@gmail.com">saurabhcoded@gmail.com</Link>.
         </p>
       </section>
 

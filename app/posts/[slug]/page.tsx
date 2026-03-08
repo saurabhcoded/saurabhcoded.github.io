@@ -37,14 +37,14 @@ export async function generateMetadata(
   return {
     title: post?.meta.title,
     description: post?.meta.summary,
-    publisher: 'Alex Pate',
-    creator: 'Alex Pate',
+    publisher: 'Saurabh Sharma',
+    creator: 'Saurabh Sharma',
     twitter: {
       ...parentMeta?.twitter,
       siteId: undefined,
       site: undefined,
-      creator: '@alexjpate',
-      creatorId: '243263662',
+      creator: '@saurabhcoded',
+      creatorId: '',
       description:
         post?.meta?.summary || parentMeta?.twitter?.description || undefined,
       title: post?.meta?.title || parentMeta?.twitter?.title,
@@ -53,7 +53,7 @@ export async function generateMetadata(
       ...parentMeta?.openGraph,
       title: post?.meta?.title || parentMeta?.openGraph?.title,
       description: post?.meta?.summary || parentMeta?.openGraph?.description,
-      url: `https://alexpate.com/posts/${slug}`,
+      url: `https://saurabhcoded.github.io/posts/${slug}`,
     },
   };
 }
