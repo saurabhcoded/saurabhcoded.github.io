@@ -1,0 +1,13 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/robots.txt/route": "app/robots.txt/route.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/sitemap.xml/route": "app/sitemap.xml/route.js",
+  "/contact/page": "app/contact/page.js",
+  "/page": "app/page.js",
+  "/posts/page": "app/posts/page.js",
+  "/projects/page": "app/projects/page.js",
+  "/info/page": "app/info/page.js",
+  "/projects/[slug]/page": "app/projects/[slug]/page.js",
+  "/posts/[slug]/page": "app/posts/[slug]/page.js"
+}

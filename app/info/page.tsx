@@ -41,29 +41,14 @@ export default async function InfoPage() {
       <PageHeader title="Information" />
       <section className="pb-8 prose prose-lg">
         <p>
-          Hi there, I&apos;m Saurabh. I build my own products, along side working
-          with some amazing companies to help them build theirs.
+          Hi there, I&apos;m Saurabh. I design and build scalable digital platforms across web, mobile, and cloud environments.
         </p>
         <p>
-          Most recently, I was working with MoonPay to help build the future of
-          payments. Before that, I was working with Monzo - the fastest growing
-          bank in the UK. Originally joining as a product designer, I
-          transitioned into a web engineer role where I worked with a variety of
-          teams to help rethink modern day banking for their millions of
-          customers.
+          My work focuses on developing robust APIs, distributed systems, and cloud-native applications that power reliable, high-performance software used in real production environments.
         </p>
 
         <p>
-          I also worked with Kalo (which eventually became Polywork) where I was
-          the first UI Engineering hire. My responsibilities included building
-          out the design system as well as ensuring a high bar of design quality
-          across the product.
-        </p>
-
-        <p>
-          I&apos;ve always bounced somewhere between design and engineering,
-          however the common thread has always been my love for building things
-          that people love to use.
+          I also work on integrating AI capabilities into modern applications to improve automation, intelligence, and user experience. With a strong focus on system architecture, security, and performance optimization, I aim to build resilient platforms that can scale efficiently as products grow.
         </p>
 
         <p>
